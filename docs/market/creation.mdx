@@ -1,0 +1,167 @@
+---
+id: creation
+title: Creating a primary market
+slug: /market/creation
+description: Overview of Palm Studio's API market creation
+keywords:
+  - Palm Studio's API
+  - API
+  - creation
+  - market
+image: ../../static/img/palm-logo.png
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+export const marketId = "{marketId}";
+
+export const Highlight = ({children, color}) => (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: '2px',
+        color: '#fff',
+        padding: '0.2rem',
+      }}>
+      {children}
+    </span>
+  );
+
+This guide walks you through the market creation process:
+
+## Create a market
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/markets</code>
+
+#### Request Body Fields
+
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+| Field                   | Required  | Description |
+|:------------------------|:----------|:------------|
+| `networkId`             | Yes       | The chosen network where the market will be deployed |
+| `type`                  | Yes       | PRIMARY or SECONDARY  |
+| `name`                  | Yes       | Arbitrary `string` assigning a name to the market |
+
+#### Example
+
+<Tabs
+  groupId="validate_username"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/validate-username HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+    "networkId": "9a2b9687-e3c8-4bc9-bdb8-87a2e27a840f",
+    "type": "PRIMARY",
+    "name": "My Incredible NFT Market"
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+## Activate a market
+
+<Highlight color="#079CEE">PUT</Highlight> <code>/api/v1/markets/{marketId}/activate</code>
+
+#### Query Param
+
+`marketId`: Provided by API upon market creation call
+
+#### Example
+
+<Tabs
+  groupId="validate_username"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+
+<TabItem value="request">
+
+```json
+PUT https://api/v1/markets/{marketId}/activate HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 200/OK
+```
+
+</TabItem>
+</Tabs>
+
+
+#### Query Param
+
+`marketId`: Provided by API upon market creation call
+
+#### Example
+
+<Tabs
+  groupId="validate_username"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+
+<TabItem value="request">
+
+```json
+PUT https://api/v1/markets/{marketId}/activate HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 200/OK
+```
+
+</TabItem>
+</Tabs>

@@ -1,0 +1,387 @@
+---
+id: management
+title: Managing users
+slug: /user/management
+description: Overview of Palm Studio's API user creation flow
+keywords:
+  - Palm Studio's API
+  - API
+  - user creation
+image: ../../static/img/palm-logo.png
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+export const groupId = "{groupId}";
+export const userId = "{userId}";
+
+export const Highlight = ({children, color}) => (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: '2px',
+        color: '#fff',
+        padding: '0.2rem',
+      }}>
+      {children}
+    </span>
+  );
+
+This guide is an overview of the users management features:
+
+### Get user information
+
+#### Request URL
+
+<Highlight color="#079CEE">GET</Highlight> <code>/api/v1/private/user</code>
+
+
+#### Example
+
+<Tabs
+  groupId="get_user_information"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+GET https://api/v1/private/user HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+```json
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+    "id": "b9f5fed3-d968-4d9f-9fec-645d37234b3k",
+    "email": "gerald@gmail.com",
+    "account": {
+        "username": "gege",
+        "status": "ACTIVATED",
+        "type": "BASIC"
+    },
+    "createdAt": "2022-01-28T10:33:23.85062"
+}
+```
+
+</TabItem>
+</Tabs>
+
+### Redeem forgotten account
+
+Sends an email to the user with a link to validate account again
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/reset-account</code>
+
+
+#### Example
+
+<Tabs
+  groupId="redeem_forgotten_account"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/reset-account HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+TBD
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+```
+
+```
+
+### Change password
+
+Changes user password
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/change-password</code>
+
+
+#### Request Body Fields
+
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+| Field                  | Required  | Description |
+|:-----------------------|:----------|:------------|
+| `password`             | Yes       | The password user wants to switch to |
+| `token`                | Yes       | ???????  |
+
+#### Example
+
+<Tabs
+  groupId="change_password"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/change-password HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "password": "somePassword",
+  "token": "47feb3f3-e721-49a3-8e79-95c3236b814f"
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+TBD
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+### View account activity
+
+Gets user activity history
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/private/user/activity?offset=-20216698&sort={}&sorted=false</code>
+
+
+#### Example
+
+<Tabs
+  groupId="get_user_activity"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+
+<TabItem value="request">
+
+``json
+POST https://api/v1/private/user/activity?offset=-20216698&sort={}&sorted=false HTTP/1.1
+```
+
+</TabItem>
+
+<TabItem value="response">
+
+TBD
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+### Retrieve assets & tokens details by user id
+
+### Get a user's portfolio
+
+#### Request URL
+
+<Highlight color="#079CEE">GET</Highlight> <code>/api/v1/private/portfolio</code>
+
+#### Example
+
+<Tabs
+  groupId="get_user_portfolio"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+GET https://api/v1/private/portfolio HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+TBD
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+
+### Get assets-sales list by user id
+
+
+
+### Delete user
+Performing this action calls the backoffice to perform the anonymisation of the user (not a real delete). Anonymise user (on the backoffice) removes permanently all personal data (keeping non-personal information) to be GDPR compliant
+
+#### Request URL
+
+<Highlight color="#079CEE">DELETE</Highlight> <code>/api/v1/provider/user/{userId}</code>
+
+
+#### Example
+
+<Tabs
+  groupId="delete_user"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+DELETE https:///api/v1/provider/user/{userId} HTTP/1.1
+```
+
+</TabItem>
+<TabItem value="response">
+
+TBD
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+
+TBD
+### Block user
+Temporarily blocks a user from buying & selling (this feature is needed to comply with Circle -payments service provider- requirements)

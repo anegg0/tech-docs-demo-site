@@ -1,0 +1,280 @@
+---
+id: creation
+title: Creating a user
+slug: /user/creation
+description: Overview of Palm Studio's API user creation flow
+keywords:
+  - Palm Studio's API
+  - API
+  - user creation
+image: ../../static/img/palm-logo.png
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+export const accountId = "{accountId}";
+export const siteId = "{siteId}";
+export const sippeerId = "{sippeerId}";
+
+export const Highlight = ({children, color}) => (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: '2px',
+        color: '#fff',
+        padding: '0.2rem',
+      }}>
+      {children}
+    </span>
+  );
+
+## Wallet creation workflow
+
+This guide walks you through the user creation process:
+
+### Signup / Account creation flow
+
+Here is a high-level view of the user creation steps:
+
+### 1. Username validation
+User inputs desired username.
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/validate-username</code>
+
+#### Request Body Fields
+
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+```json
+{
+  "username": "sample name"
+}
+```
+
+| Field                   | Required  | Description |
+|:------------------------|:----------|:------------|
+| `username`              | Yes       | The usernames input by user |
+
+#### Example
+
+<Tabs
+  groupId="validate_username"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/validate-username HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "username": "sample name"
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+
+If user name is taken, alternative usernames are suggested. Username is validated when a unique string is selected.
+
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/suggest-username/:username</code>
+
+### 2. Email validation
+
+##### 1. User inputs email.
+
+##### 2. The platform verifies that the email is not a derived email. This feature allows to ban derived email accounts from registration in order to avoid multiple registrations from the same user. Google (as well as other email providers) allow the creation of derived email addresses (modifying your gmail adding dots will still work, or adding something will still be the same email account)[This functionality can be activated as marketplace configuration.
+
+#### Request URL
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/validate-email</code>
+
+#### Request Body Fields
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+```json
+{
+  "email": "sample@email.com"
+}
+```
+
+| Field                   | Required  | Description |
+|:------------------------|:----------|:------------|
+| `email`                 | Yes       | The email input by user |
+
+#### Example
+
+<Tabs
+  groupId="validate_email"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/validate-email HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "email": "sample@email.com"
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+##### 3. User solves a task provided by a Bot Defender or Captcha. This feature can be activated as a marketplace configuration.
+
+
+##### 4. An email is sent to the user for them to activate their email. This feature can be activated as a marketplace configuration.
+
+
+##### 5. User validates email address through a link received via email.
+
+### 3. New user account creation
+
+##### A new user account is created once user has successfully authenticated.
+
+##### Request URL
+
+<Highlight color="#079CEE">POST</Highlight><code>/api/v1/public/on-boarding/signup</code>
+
+#### Request Body Fields
+
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+| Field                   | Required  | Description |
+|:------------------------|:----------|:------------|
+| `username`              | Yes       | User's username |
+| `email`                 | Yes       | User's email |
+| `password`              | Yes       |User's password |
+| `captcha`               | Yes       | Validation captcha token |
+| `termsAndConditions`    |           | User's  termsAndConditions boolean |
+
+
+#### Example
+
+<Tabs
+  groupId="validate_email"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/validate-email HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "username": "Username",
+  "email": "some@email.com",
+  "password": "password0.",
+  "captcha": "P0_eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9",
+  "termsAndConditions": true
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+### 4. Custodial wallet creation
+
+##### A custodial wallet is created that is associated to the new user account. The custodial mode abstracts private/public keys complexity from the user. We have integrated an external service provider to provide and manage the custodial wallet. [Check the custodial wallet page to know more about this](../wallet/management.mdx)

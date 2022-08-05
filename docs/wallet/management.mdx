@@ -1,0 +1,102 @@
+---
+id: management
+title: Managing wallets
+slug: /wallet/management
+description: Overview of Palm Studio's API wallet operation management
+keywords:
+  - Palm Studio's API
+  - API
+  - wallet
+  - management
+image: ../../static/img/palm-logo.png
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+export const accountId = "{accountId}";
+export const siteId = "{siteId}";
+export const sippeerId = "{sippeerId}";
+
+export const Highlight = ({children, color}) => (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: '2px',
+        color: '#fff',
+        padding: '0.2rem',
+      }}>
+      {children}
+    </span>
+  );
+
+## Wallet creation workflow
+
+When a user is created in the marketplace (usually at the time of email activation), an inversor is created as well as a custodial wallet for them.
+
+When an investor/issuer is created you can choose to have a custodial or not custodial wallet in onyze with an associated Public & private key for a Palm Network account.
+
+
+### Create and manage end users and their KYC and AML processes
+
+### Create and manage wallets in any Digital Asset for your end users
+
+#### Create a custodial wallet
+
+##### Request URL
+
+<Highlight color="#079CEE">POST</Highlight><code>/api/v1/private/payment/wallet</code>
+
+#### Add Funds to Payment Wallet
+
+##### Request URL
+
+<Highlight color="#079CEE">POST</Highlight><code>/api/v1/private/payment/wallet/deposit</code>
+
+#### Request Body Fields
+
+```json
+{
+  "encryptedData": "nulla in dolore Ut",
+  "expMonth": -52667834,
+  "expYear": 29907411,
+  "idempotencyKey": "dolore sint",
+  "verification": {
+    "type": "dolore in qui do",
+    "successUrl": "ex adipisicing et",
+    "failureUrl": "ex tempor"
+  },
+  "billingDetails": {
+    "city": "irur",
+    "country": "in minim",
+    "district": "nisi ad enim in",
+    "line1": "labore",
+    "name": "anim ut mollit",
+    "postalCode": "irure proident in consectetur",
+    "line2": "quis commodo adipisicing incididunt"
+  },
+  "metadata": {
+    "ipAddress": "commodo aute in dolo",
+    "sessionId": "magna cillum cul",
+    "phoneNumber": "sit"
+  },
+  "payment": {
+    "amount": {
+      "amount": -26324081.80656971,
+      "currency": "do quis magna i"
+    },
+    "description": "in laborum ut commodo",
+    "channel": "non Lorem eiusmod laborum"
+  }
+}
+```
+
+### Sign transactions for wallets
+
+### Get wallet balance
+
+##### Request URL
+
+```
+/api/v1/private/users/balance```
+```

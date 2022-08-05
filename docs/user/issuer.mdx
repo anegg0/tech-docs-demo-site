@@ -1,0 +1,148 @@
+---
+id: issuer
+title: Managing issuers
+slug: /user/issuer
+description: Overview of Palm Studio's API issuers management
+keywords:
+  - Palm Studio's API
+  - API
+  - issuer management
+image: ../../static/img/palm-logo.png
+---
+
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+export const Highlight = ({children, color}) => (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: '2px',
+        color: '#fff',
+        padding: '0.2rem',
+      }}>
+      {children}
+    </span>
+  );
+
+This guide is an overview of the issuers management
+
+# Issuers
+
+An issuer is a person/entity that issues NFTs or collections. By issuance, we understand the process of creating and listing in a primary market. In other words, it is the "content creator". The issuer can be the client itself, which decides to issue its own NFTs or any content creator that is associated with the client, e.g. if the client is a museum, the museum can issue its own NFTs or it can create issuer accounts for each of its collaborating artists and let them issue NFTs.
+
+- Create issuers
+
+<Highlight color="#079CEE">POST</Highlight> <code>/api/v1/issuers</code>
+
+
+#### Request Body Fields
+
+The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
+
+```json
+    {
+        "basicInfo": {
+        "name": "Salvador Dali",
+        "countryCode": "US",
+        "taxIdentificationNumber": "586924667"
+    }
+    }
+
+    response:
+
+    {
+        "id": "4def6390-fcd7-4ea7-85fb-26e30988b260",
+    "basicInfo": {
+        "name": "Salvador Dali",
+        "countryCode": "US",
+        "taxIdentificationNumber": "586924667"
+    },
+    "dltCredentials": {
+        "publicKey": "N/A",
+        "dltAddress": "0xDC6725D6714cED8B6915763A3C3A79BC91271BCd"
+    },
+    "isCustodial": true,
+    "status": "ACTIVE",
+    "_links": {
+        "self": {
+            "href": "https://api.pre.dats.io.builders:443/api/v1/issuers/4def6390-fcd7-4ea7-85fb-26e30988b260",
+            "templated": false
+        }
+    },
+    "_embedded": {}
+}
+```
+
+| Field                   | Required  | Description |
+|:------------------------|:----------|:------------|
+| `username`              | Yes       | The usernames input by user |
+
+#### Example
+
+<Tabs
+  groupId="validate_username"
+  defaultValue="request"
+  values={[
+    { label: 'Request', value: 'request', },
+    { label: 'Response', value: 'response', },
+  ]
+}>
+<TabItem value="request">
+
+```json
+POST https://api/v1/public/on-boarding/validate-username HTTP/1.1
+Content-Type: application/json; charset=utf-8
+
+{
+  "username": "sample name"
+}
+```
+
+</TabItem>
+<TabItem value="response">
+
+```xml
+HTTP/1.1 201 Created
+Content-Type: application/xml
+
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<SiteResponse>
+    <Site>
+        <Id>12345</Id>
+        <Name>SetupTest</Name>
+        <Description>Programmatic Setup Test</Description>
+        <CustomerName>BW</CustomerName>
+        <Address>
+            <HouseNumber>900</HouseNumber>
+            <StreetName>Main Campus Dr</StreetName>
+            <City>RALEIGH</City>
+            <StateCode>NC</StateCode>
+            <Zip>27606</Zip>
+            <Country>United States</Country>
+            <AddressType>Billing</AddressType>
+        </Address>
+    </Site>
+</SiteResponse>
+```
+
+</TabItem>
+</Tabs>
+
+
+    - Create issuer with custody provider
+    - Create issuer with DLT credentials
+
+- View issuers information
+    - View a list of issuers
+    - View issuer details
+    - View an issuer’s investment account information
+    - View an issuer’s transactions
+    - View an issuer’s asset list
+    - View the transaction list of an issuer’s asset
+    - View an issuer’s token list
+    - View the token list of an issuer’s asset
+
+- Update issuers information
