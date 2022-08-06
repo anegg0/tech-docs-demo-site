@@ -10,7 +10,6 @@ import Layout from '@docusaurus/theme-classic/lib/theme/Layout';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 import SvgDots from '@site/src/svg/Dots';
-import Typed from '@site/src/theme/Typed';
 
 function NotFound() {
   return (
@@ -29,7 +28,7 @@ function NotFound() {
               </div>
 
               <h1 className="title">
-                <Typed strings={['>_ Page not found']} typeSpeed={75} />
+                '_ Page not found'
               </h1>
 
               <a href="/" className="link">
@@ -39,7 +38,7 @@ function NotFound() {
           </div>
         </div>
       </main>
-    </Layout>
+    </Layout >
   );
 }
 

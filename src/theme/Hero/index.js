@@ -1,8 +1,5 @@
 import React from 'react';
 import useBaseUrl from '@docusaurus/useBaseUrl';
-
-import Typed from '@site/src/theme/Typed';
-
 import SvgHero from '@site/src/svg/Hero';
 import SvgCreate from '@site/src/svg/Create';
 import SvgCreateBg from '@site/src/svg/CreateBg';
@@ -21,16 +18,8 @@ function Hero() {
           <div className="col col--12">
             <div className="row">
               <div className="col col--8">
-                <h1 className="hero-title">
-                  The Home of
-                  <br /> Palm Developers
-                </h1>
-
+                <h1 className="hero-title">The Palm Network</h1>
                 <h2 className="hero-subtitle">
-                  <Typed
-                    strings={['>_ Made by developers for developers']}
-                    typeSpeed={75}
-                  />
                 </h2>
               </div>
               <div className="col col--4">
@@ -119,7 +108,7 @@ function Hero() {
           </div>
         </div>
       </div>
-    </header>
+    </header >
   );
 }
 
