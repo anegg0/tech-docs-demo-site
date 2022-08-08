@@ -10,8 +10,7 @@ module.exports = {
   favicon: 'img/favicon.ico',
   organizationName: 'redis-developer', // Usually your GitHub org/user name.
   projectName: 'redis-developer', // Usually your repo name.
-  customFields: {
-  },
+  customFields: {},
   themeConfig: {
     // ...
     googleTagManager: {
@@ -33,8 +32,8 @@ module.exports = {
       style: 'dark',
       title: null,
       logo: {
-        alt: 'Palm Developer Hub logo',
-        src: 'img/logo-1.png',
+        alt: 'Palm logo',
+        src: 'img/palmLogo.svg',
       },
       hideOnScroll: true,
       items: [
@@ -60,7 +59,7 @@ module.exports = {
       style: 'dark',
       logo: {
         alt: 'Palm logo',
-        src: 'img/redis_logo_red_white_rgb.svg',
+        src: 'img/palmLogo.svg',
         href: 'https://redis.com/',
       },
       links: [
