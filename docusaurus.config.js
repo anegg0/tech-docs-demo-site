@@ -16,6 +16,29 @@ module.exports = {
     googleTagManager: {
       trackingID: 'UA-64552723-17',
     },
+    algolia: {
+      // The application ID provided by Algolia
+      appId: '2F2YINGKQ2',
+
+      // Public API key: it is safe to commit it
+      apiKey: 'ffcca0ebd2a62726d33e0c4f9ed86584',
+
+      indexName: 'docs.palm.io',
+
+      // Optional: see doc section below
+      contextualSearch: true,
+
+      // Optional: Specify domains where the navigation should occur through window.location instead on history.push. Useful when our Algolia config crawls multiple documentation sites and we want to navigate with window.location.href to them.
+      // externalUrlRegex: 'external\\.com|domain\\.com',
+
+      // Optional: Algolia search parameters
+      searchParameters: {},
+
+      // Optional: path for search page that enabled by default (`false` to disable it)
+      searchPagePath: 'search',
+
+      //... other Algolia params
+    },
     // prism: {
     //   additionalLanguages: [
     //     'csharp',
@@ -121,7 +144,7 @@ module.exports = {
       // ],
       // },
       // ],
-      copyright: `Copyright: © ${new Date().getFullYear()} Palm. All rights reserved. Palm and the cube logo are registered trademarks of Palm Ltd.`,
+      copyright: `Copyright: © ${new Date().getFullYear()} The Palm Network. All rights reserved.`,
     },
     colorMode: {
       // Hides the switch in the navbar
