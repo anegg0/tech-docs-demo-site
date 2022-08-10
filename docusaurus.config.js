@@ -39,17 +39,6 @@ module.exports = {
 
       //... other Algolia params
     },
-    // prism: {
-    //   additionalLanguages: [
-    //     'csharp',
-    //     'php',
-    //     'ruby',
-    //     'java',
-    //     'rust',
-    //     'elixir',
-    //     'groovy',
-    //   ],
-    // },
 
     navbar: {
       style: 'dark',
@@ -61,21 +50,11 @@ module.exports = {
       hideOnScroll: true,
       items: [
         {
-          to: '/create/rediscloud',
+          to: 'intro',
           activeBasePath: 'docs',
           label: 'Get started',
           position: 'right',
         },
-        // {
-        //   href: 'https://launchpad.redis.com',
-        //   label: 'Palm Launchpad',
-        //   position: 'right',
-        // },
-        // {
-        //   href: 'https://redis.com/try-free/',
-        //   label: 'Try Free',
-        //   position: 'right',
-        // },
       ],
     },
     footer: {
@@ -85,65 +64,6 @@ module.exports = {
         src: 'img/palmLogo.svg',
         href: 'https://palm.io/',
       },
-      // links: [
-      // {
-      // title: 'Get Started',
-      // items: [
-      //   {
-      //     label: 'Create Database',
-      //     to: '/create/rediscloud',
-      //   },
-      //   {
-      //     label: 'Develop',
-      //     to: '/develop/',
-      //   },
-      //   {
-      //     label: 'Explore your data',
-      //     to: '/explore/redisinsight/',
-      //   },
-      //   {
-      //     label: 'Best Practices',
-      //     href: 'https://redis.com/redis-best-practices/introduction/',
-      //   },
-      // {
-      //   label: 'Tutorials',
-      //   to: '#',
-      // },
-      // {
-      //   label: 'Samples & Demos',
-      //   to: '#',
-      // },
-      // {
-      //   label: 'Palm Stack',
-      //   href: '/create/redis-stack/',
-      // },
-      //   ],
-      // },
-      // {
-      //   title: 'Resources',
-      //   items: [
-      //     {
-      //       label: 'Community',
-      //       href: 'https://redis.com/community/',
-      //     },
-      //     {
-      //       label: 'Palm University',
-      //       href: 'https://university.redis.com',
-      //     },
-      //     {
-      //       label: 'Command Reference',
-      //       href: 'https://redis.io/commands',
-      //     },
-      //     {
-      //       label: 'How-tos & tutorials',
-      //       to: '/howtos',
-      //     },
-      //   label: 'Use Cases',
-      //   href: 'https://redis.com/solutions',
-      // },
-      // ],
-      // },
-      // ],
       copyright: `Copyright: © ${new Date().getFullYear()} The Palm Network. All rights reserved.`,
     },
     colorMode: {
@@ -151,15 +71,6 @@ module.exports = {
       // Useful if you want to support a single color mode
       disableSwitch: false,
     },
-    // announcementBar: {
-    //   id: 'redisconf20201cfp', // Any value that will identify this message.
-    //   content:
-    //     '<p class="text"> PalmDays Available Now On-Demand. </p> <a href="https://redis.com/redisdays/" target="_blank" rel="noopener" class="btn">Learn More</a>',
-    //   //  content: '<p class="text"></p> <a href="https://redislabs.com/redisconf/" target="_blank" rel="noopener" class="btn"></a>',
-    //   backgroundColor: '#fff', // Defaults to `#fff`.
-    //   textColor: '#000', // Defaults to `#000`.
-    //   isCloseable: true, // Defaults to `true`.
-    // },
   },
   presets: [
     [
