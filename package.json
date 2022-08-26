@@ -1,5 +1,5 @@
 {
-  "name": "redis-developer-hub",
+  "name": "palm-network-documentation",
   "version": "0.0.0",
   "private": true,
   "engines": {
@@ -50,11 +50,7 @@
     "prettier-linter-helpers": "^1.0.0"
   },
   "browserslist": {
-    "production": [
-      ">0.5%",
-      "not dead",
-      "not op_mini all"
-    ],
+    "production": [">0.5%", "not dead", "not op_mini all"],
     "development": [
       "last 1 chrome version",
       "last 1 firefox version",
