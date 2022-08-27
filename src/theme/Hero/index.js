@@ -19,13 +19,36 @@ function Hero() {
             <div className="row">
               <div className="col col--8">
                 <h1 className="hero-title">The Palm Network</h1>
-                <h2 className="hero-subtitle">
-                </h2>
+                <h2 className="hero-subtitle">oue </h2>
               </div>
               <div className="col col--4">
                 <SvgHero color="#FFFFFF" className="illustration" />
               </div>
             </div>
+            <div className="row">
+              <h2 >Quick Links</h2>
+            </div>
+            <div className="row">
+              <div className="boxes">
+                <div className="box quicklinks">
+                  <div className="text">
+                    <h5 className="title">Network details</h5>
+                  </div>
+                  <a href={useBaseUrl('/create/redis-stack')} className="link">
+                    Read More
+                  </a>
+                </div>
+                <div className="box quicklinks">
+                  <div className="text">
+                    <h3 className="title">Network details</h3>
+                  </div>
+                  <a href={useBaseUrl('/create/redis-stack')} className="link">
+                    Read More
+                  </a>
+                </div>
+              </div>
+            </div>
+
             <div className="boxes">
               <div className="box box-create">
                 <SvgCreateBg color="#FFFFFF" className="bg" />
