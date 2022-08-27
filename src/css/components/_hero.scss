@@ -61,7 +61,7 @@
 
   .hero-subtitle {
     margin: 17px 0 0 0;
-    line-height: 2.0;
+    line-height: 2;
     font-size: 18px;
     font-weight: 400;
 
@@ -89,7 +89,7 @@
       position: relative;
       border: 1px dashed $red;
       border-radius: 10px;
-      transition: background-color .2s ease-in-out;
+      transition: background-color 0.2s ease-in-out;
 
       @include mobile {
         margin: 0 auto;
@@ -97,7 +97,7 @@
       }
 
       &:hover {
-        background-color: $red;
+        background-color: $grey;
       }
 
       &:not(:first-child) {
@@ -115,6 +115,11 @@
         position: absolute;
       }
 
+      &.box-quicklinks .bg {
+        top: 300px;
+        left: 120px;
+      }
+
       &.box-create .bg {
         top: 900px;
         left: 520px;
@@ -129,7 +134,6 @@
         top: 900px;
         left: 520px;
       }
-
 
       &.box-operate .bg {
         top: 900px;
@@ -204,7 +208,7 @@
             flex: 0 0 14px;
 
             path {
-              transition: fill .2s ease-in-out;
+              transition: fill 0.2s ease-in-out;
             }
           }
         }
@@ -234,13 +238,13 @@
     @media only screen and (min-width: 997px) and (max-width: 1100px) {
       float: right;
       margin-left: 0;
-      zoom: .8;
+      zoom: 0.8;
     }
 
     @include tablet-mobile {
       display: block;
       margin: 0 auto 48px;
-      zoom: .48;
+      zoom: 0.48;
     }
   }
 }
