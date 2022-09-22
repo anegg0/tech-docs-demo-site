@@ -2,13 +2,13 @@
 id: creation
 title: Creating a primary market
 slug: /market/creation
-description: Overview of Palm Studio's API market creation
+description: Overview of Gr0wing Studio's API market creation
 keywords:
-  - Palm Studio's API
+  - Gr0wing Studio's API
   - API
   - creation
   - market
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
 
 import Tabs from '@theme/Tabs';
@@ -17,16 +17,16 @@ import TabItem from '@theme/TabItem';
 export const marketId = "{marketId}";
 
 export const Highlight = ({children, color}) => (
-    <span
-      style={{
+<span
+style={{
         backgroundColor: color,
         borderRadius: '2px',
         color: '#fff',
         padding: '0.2rem',
       }}>
-      {children}
-    </span>
-  );
+{children}
+</span>
+);
 
 This guide walks you through the market creation process:
 
@@ -40,21 +40,21 @@ This guide walks you through the market creation process:
 
 The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
 
-| Field                   | Required  | Description |
-|:------------------------|:----------|:------------|
-| `networkId`             | Yes       | The chosen network where the market will be deployed |
-| `type`                  | Yes       | PRIMARY or SECONDARY  |
-| `name`                  | Yes       | Arbitrary `string` assigning a name to the market |
+| Field       | Required | Description                                          |
+| :---------- | :------- | :--------------------------------------------------- |
+| `networkId` | Yes      | The chosen network where the market will be deployed |
+| `type`      | Yes      | PRIMARY or SECONDARY                                 |
+| `name`      | Yes      | Arbitrary `string` assigning a name to the market    |
 
 #### Example
 
 <Tabs
-  groupId="validate_username"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_username"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 <TabItem value="request">
 
@@ -110,12 +110,12 @@ Content-Type: application/xml
 #### Example
 
 <Tabs
-  groupId="validate_username"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_username"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 
 <TabItem value="request">
@@ -134,7 +134,6 @@ HTTP/1.1 200/OK
 </TabItem>
 </Tabs>
 
-
 #### Query Param
 
 `marketId`: Provided by API upon market creation call
@@ -142,12 +141,12 @@ HTTP/1.1 200/OK
 #### Example
 
 <Tabs
-  groupId="validate_username"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_username"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 
 <TabItem value="request">

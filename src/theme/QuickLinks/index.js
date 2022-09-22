@@ -10,47 +10,12 @@ import SvgOperate from '@site/src/svg/Operate';
 import SvgExploreBg from '@site/src/svg/ExploreBg';
 import SvgArrowRight from '@site/src/svg/ArrowRight';
 
-function Hero() {
+function QuickLinks() {
   return (
     <header className="rds-hero">
       <div className="container">
         <div className="row">
           <div className="col col--12">
-            <div className="row">
-              <div className="col col--8">
-                <h1 className="hero-title">The gr0wing Network</h1>
-                <h2 className="hero-subtitle"></h2>
-              </div>
-              <div className="col col--4">
-                <SvgHero color="#FFFFFF" className="illustration" />
-              </div>
-            </div>
-            <div className="row">
-              <h2 >Quick Links</h2>
-            </div>
-            <div className="row">
-              <div className="box quicklinks">
-                <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
-                </div>
-              </div>
-              <div className="box quicklinks">
-                <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
-                </div>
-              </div>
-              <div className="box quicklinks">
-                <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
-                </div>
-              </div>
-              <div className="box quicklinks">
-                <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
-                </div>
-              </div>
-            </div>
-
             <div className="boxes">
               <div className="box box-create">
                 <SvgCreateBg color="#FFFFFF" className="bg" />
@@ -67,7 +32,7 @@ function Hero() {
                   </span>
                 </div>
                 <a href={useBaseUrl('/create/redis-stack')} className="link">
-
+                  Read More
                 </a>
               </div>
 
@@ -86,7 +51,7 @@ function Hero() {
                   </span>
                 </div>
                 <a href={useBaseUrl('/develop/')} className="link">
-
+                  Read More
                 </a>
               </div>
 
@@ -106,7 +71,7 @@ function Hero() {
                   </span>
                 </div>
                 <a href={useBaseUrl('/explore/')} className="link">
-
+                  Read More
                 </a>
               </div>
 
@@ -126,7 +91,7 @@ function Hero() {
                   </span>
                 </div>
                 <a href={useBaseUrl('/operate/')} className="link">
-
+                  Read More
                 </a>
               </div>
             </div>
@@ -137,4 +102,4 @@ function Hero() {
   );
 }
 
-export default Hero;
+export default QuickLinks;

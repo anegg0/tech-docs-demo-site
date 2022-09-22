@@ -2,30 +2,28 @@
 id: issuer
 title: Managing issuers
 slug: /user/issuer
-description: Overview of Palm Studio's API issuers management
+description: Overview of Gr0wing Studio's API issuers management
 keywords:
-  - Palm Studio's API
+  - Gr0wing Studio's API
   - API
   - issuer management
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
-
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-
 export const Highlight = ({children, color}) => (
-    <span
-      style={{
+<span
+style={{
         backgroundColor: color,
         borderRadius: '2px',
         color: '#fff',
         padding: '0.2rem',
       }}>
-      {children}
-    </span>
-  );
+{children}
+</span>
+);
 
 This guide is an overview of the issuers management
 
@@ -36,7 +34,6 @@ An issuer is a person/entity that issues NFTs or collections. By issuance, we un
 - Create issuers
 
 <Highlight color="#079CEE">POST</Highlight> <code>/api/v1/issuers</code>
-
 
 #### Request Body Fields
 
@@ -76,19 +73,19 @@ The fields below should be formatted as `json` elements and put in the request b
 }
 ```
 
-| Field                   | Required  | Description |
-|:------------------------|:----------|:------------|
-| `username`              | Yes       | The usernames input by user |
+| Field      | Required | Description                 |
+| :--------- | :------- | :-------------------------- |
+| `username` | Yes      | The usernames input by user |
 
 #### Example
 
 <Tabs
-  groupId="validate_username"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_username"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 <TabItem value="request">
 
@@ -131,18 +128,18 @@ Content-Type: application/xml
 </TabItem>
 </Tabs>
 
-
     - Create issuer with custody provider
     - Create issuer with DLT credentials
 
 - View issuers information
-    - View a list of issuers
-    - View issuer details
-    - View an issuer’s investment account information
-    - View an issuer’s transactions
-    - View an issuer’s asset list
-    - View the transaction list of an issuer’s asset
-    - View an issuer’s token list
-    - View the token list of an issuer’s asset
+
+  - View a list of issuers
+  - View issuer details
+  - View an issuer’s investment account information
+  - View an issuer’s transactions
+  - View an issuer’s asset list
+  - View the transaction list of an issuer’s asset
+  - View an issuer’s token list
+  - View the token list of an issuer’s asset
 
 - Update issuers information

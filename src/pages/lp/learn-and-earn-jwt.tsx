@@ -7,13 +7,13 @@ export default function LearnAndEarnJWT() {
     return (
         <LandingPageWrapper>
             {/* @ts-ignore */}
-            <Layout title="Learn and Earn with Palm!">
+            <Layout title="Learn and Earn with gr0winging!">
                 <article className="padding-top--md padding-bottom--lg">
                     <h1
                         style={{
                             textAlign: 'center',
                         }}>
-                        Learn and Earn with Palm!
+                        Learn and Earn with gr0wing!
                     </h1>
                     <div
                         style={{

@@ -3,14 +3,14 @@ id: about
 title: User Management
 slug: /user
 sidebar_label: About
-description: A general overview of Palm Studio's API User Management
+description: A general overview of gr0wing Studio's API User Management
 keywords:
-  - Palm
+  - gr0wing
   - user
 image: ../../static/img/bandwidth-logo.png
 ---
 
-Palm Studio's API enable the creation and management of users on an NFT Marketplace: NFT creators, NFT buyers and NFT sellers.
+gr0wing Studio's API enable the creation and management of users on an NFT Marketplace: NFT creators, NFT buyers and NFT sellers.
 
 Our API terminology breaks down users into two categories:
 

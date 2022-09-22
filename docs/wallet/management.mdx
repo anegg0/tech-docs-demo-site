@@ -2,13 +2,13 @@
 id: management
 title: Managing wallets
 slug: /wallet/management
-description: Overview of Palm Studio's API wallet operation management
+description: Overview of Gr0wing Studio's API wallet operation management
 keywords:
-  - Palm Studio's API
+  - Gr0wing Studio's API
   - API
   - wallet
   - management
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
 
 import Tabs from '@theme/Tabs';
@@ -19,23 +19,22 @@ export const siteId = "{siteId}";
 export const sippeerId = "{sippeerId}";
 
 export const Highlight = ({children, color}) => (
-    <span
-      style={{
+<span
+style={{
         backgroundColor: color,
         borderRadius: '2px',
         color: '#fff',
         padding: '0.2rem',
       }}>
-      {children}
-    </span>
-  );
+{children}
+</span>
+);
 
 ## Wallet creation workflow
 
 When a user is created in the marketplace (usually at the time of email activation), an inversor is created as well as a custodial wallet for them.
 
-When an investor/issuer is created you can choose to have a custodial or not custodial wallet in onyze with an associated Public & private key for a Palm Network account.
-
+When an investor/issuer is created you can choose to have a custodial or not custodial wallet in onyze with an associated Public & private key for a Gr0wing Network account.
 
 ### Create and manage end users and their KYC and AML processes
 
@@ -97,6 +96,6 @@ When an investor/issuer is created you can choose to have a custodial or not cus
 
 ##### Request URL
 
-```
+````
 /api/v1/private/users/balance```
-```
+````

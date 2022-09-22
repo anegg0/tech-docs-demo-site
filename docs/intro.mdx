@@ -1,58 +1,56 @@
 ---
 id: intro
-title: Welcome to Palm Studio API Developer Docs
+title: Welcome to Gr0wing Studio API Developer Docs
 slug: /intro
-description: Palm Studio API Developer Docs
+description: Gr0wing Studio API Developer Docs
 sidebar_label: Introduction
 hide_table_of_contents: true
-keywords: [ palm, network, developers, documentation]
+keywords: [gr0wing, network, developers, documentation]
 hide_title: false
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
 
-import PalmCard from '@site/src/theme/PalmCard';
-
+import Gr0wingCard from '@site/src/theme/gr0wingCard/';
 
 export const Product = ({color, link, Svg, children}) => (
 <a href={link} className="docs-intro-grid-item" style={{
         backgroundColor: color
     }}>
-    <Svg width='75px' height='75px' />
-    <span className="docs-intro-grid-item-title">{children}</span>
+<Svg width='75px' height='75px' />
+<span className="docs-intro-grid-item-title">{children}</span>
 </a>
 );
 
-## What are Palm Studio API?
+## What are Gr0wing Studio API?
 
 Our set of API help you build an NFT marketplace quickly without the complexity of blockchain development.
-Palm Studio API expose standard Restful endpoints allowing you to create NFTs markets and collections on the Palm Network (Ethereum blockchain) using standard RESTful calls.
+Gr0wing Studio API expose standard Restful endpoints allowing you to create NFTs markets and collections on the Gr0wing Network (Ethereum blockchain) using standard RESTful calls.
 
+## Why develop on Gr0wing Studio API?
 
-## Why develop on Palm Studio API?
+- No need for blockchain specific knowledge: build now, worry about the blockchain later.
+- Ready to use, Battle-tested NFT contracts.
+- Easy to query on-chain data.
+- Mint your own NFT collection, build your own marketplace quickly.
 
-* No need for blockchain specific knowledge: build now, worry about the blockchain later.
-* Ready to use, Battle-tested NFT contracts.
-* Easy to query on-chain data.
-* Mint your own NFT collection, build your own marketplace quickly.
+## What can you do with Gr0wing Studio API?
 
-## What can you do with Palm Studio API?
+Gr0wing Studio API is designed to manage every aspect of an NFT marketplace while using your own custom UI:
 
-Palm Studio API is designed to manage every aspect of an NFT marketplace while using your own custom UI:
-
-* Large NFT collections minting and management
-* Primary and secondary market management
-* Fiat payment (on-ramp and off-ramp)
-* User management: buyers and creators
-* Custodial wallet management
+- Large NFT collections minting and management
+- Primary and secondary market management
+- Fiat payment (on-ramp and off-ramp)
+- User management: buyers and creators
+- Custodial wallet management
 
 ## Build an NFT Marketplace
 
-* Build a fully-featured NFT marketplace without managing the complexity of Blockchain (security risks, legal compliance, engineers scarcity). Palm Studio's API allow you to build a blockchain-based NFT marketplace using battle-tested smart contracts, using any UI framework and offering fiat and crypto payment options to your customers.
+- Build a fully-featured NFT marketplace without managing the complexity of Blockchain (security risks, legal compliance, engineers scarcity). Gr0wing Studio's API allow you to build a blockchain-based NFT marketplace using battle-tested smart contracts, using any UI framework and offering fiat and crypto payment options to your customers.
 
 <div class="row">
 
  <div class="col">
-     <PalmCard 
+     <Gr0wingCard 
         title="Crypto & Fiat payment API" 
         imgPath="recloud.png"
         description="Opening NFT markets to a mainstream audience with onramp payment." 
@@ -62,7 +60,7 @@ Palm Studio API is designed to manage every aspect of an NFT marketplace while u
  </div>
 
  <div class="col">
-    <PalmCard 
+    <Gr0wingCard 
         title="KYC and AML Automation" 
         description="Build safety and compliance in your code with our framework" 
         page="/docs/compliance/kyc-aml"
@@ -70,7 +68,7 @@ Palm Studio API is designed to manage every aspect of an NFT marketplace while u
  </div>
 
  <div class="col">
-    <PalmCard 
+    <Gr0wingCard 
         title="Reporting suspicious activity" 
         description="Get notified and manage suspicious transactions" 
         page="/docs/compliance/reporting"

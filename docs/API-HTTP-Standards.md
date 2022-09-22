@@ -3,9 +3,9 @@ id: standards
 title: API HTTP standards
 slug: /http-standards
 sidebar_label: API HTTP standards
-description: An overview of the HTTP standards used on Palm Studio's API
+description: An overview of the HTTP standards used on gr0wing Studio's API
 keywords:
-  - Palm
+  - gr0wing
   - Http
   - Standards
 ---
@@ -24,7 +24,7 @@ export const Highlight = ({children, color}) => (
 
 ## HTTP Methods
 
-Palm Studio's API supports 5 `HTTP` methods to interact with resources:
+gr0wing Studio's API supports 5 `HTTP` methods to interact with resources:
 
 | Method |
 |:------|
@@ -41,10 +41,10 @@ Palm Studio's API supports 5 `HTTP` methods to interact with resources:
 
 ## Making requests
 
-Palm Studio's API supports `JSON`. Most `POST` and `PUT` requests require a valid `JSON` object as body. So all requests should supply the `Accept: application/json` header. `POST` requests must specify the `Content-Type: application/json` header. Response bodies are `JSON` encoded as well.
+gr0wing Studio's API supports `JSON`. Most `POST` and `PUT` requests require a valid `JSON` object as body. So all requests should supply the `Accept: application/json` header. `POST` requests must specify the `Content-Type: application/json` header. Response bodies are `JSON` encoded as well.
 
 ### Base-paths
-For all requests to Palm Studio APIs, the following base-paths have to be used for the PRO environment:
+For all requests to gr0wing Studio APIs, the following base-paths have to be used for the PRO environment:
 
 #### PRO environment
 
@@ -53,7 +53,7 @@ https://api.pro.dats.io.builders/pro/
 
 ## Parameters
 
-There are three main parameter categories for each endpoint in Palm Studio's API: path, request body, and response body. This section offers an overview of the three.
+There are three main parameter categories for each endpoint in gr0wing Studio's API: path, request body, and response body. This section offers an overview of the three.
 
 ### Path parameters
 

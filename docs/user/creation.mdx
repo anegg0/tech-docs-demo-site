@@ -2,12 +2,12 @@
 id: creation
 title: Creating a user
 slug: /user/creation
-description: Overview of Palm Studio's API user creation flow
+description: Overview of Gr0wing Studio's API user creation flow
 keywords:
-  - Palm Studio's API
+  - Gr0wing Studio's API
   - API
   - user creation
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
 
 import Tabs from '@theme/Tabs';
@@ -18,16 +18,16 @@ export const siteId = "{siteId}";
 export const sippeerId = "{sippeerId}";
 
 export const Highlight = ({children, color}) => (
-    <span
-      style={{
+<span
+style={{
         backgroundColor: color,
         borderRadius: '2px',
         color: '#fff',
         padding: '0.2rem',
       }}>
-      {children}
-    </span>
-  );
+{children}
+</span>
+);
 
 ## Wallet creation workflow
 
@@ -38,6 +38,7 @@ This guide walks you through the user creation process:
 Here is a high-level view of the user creation steps:
 
 ### 1. Username validation
+
 User inputs desired username.
 
 #### Request URL
@@ -54,19 +55,19 @@ The fields below should be formatted as `json` elements and put in the request b
 }
 ```
 
-| Field                   | Required  | Description |
-|:------------------------|:----------|:------------|
-| `username`              | Yes       | The usernames input by user |
+| Field      | Required | Description                 |
+| :--------- | :------- | :-------------------------- |
+| `username` | Yes      | The usernames input by user |
 
 #### Example
 
 <Tabs
-  groupId="validate_username"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_username"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 <TabItem value="request">
 
@@ -109,9 +110,7 @@ Content-Type: application/xml
 </TabItem>
 </Tabs>
 
-
 If user name is taken, alternative usernames are suggested. Username is validated when a unique string is selected.
-
 
 #### Request URL
 
@@ -128,6 +127,7 @@ If user name is taken, alternative usernames are suggested. Username is validate
 <Highlight color="#079CEE">POST</Highlight> <code>/api/v1/public/on-boarding/validate-email</code>
 
 #### Request Body Fields
+
 The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
 
 ```json
@@ -136,19 +136,19 @@ The fields below should be formatted as `json` elements and put in the request b
 }
 ```
 
-| Field                   | Required  | Description |
-|:------------------------|:----------|:------------|
-| `email`                 | Yes       | The email input by user |
+| Field   | Required | Description             |
+| :------ | :------- | :---------------------- |
+| `email` | Yes      | The email input by user |
 
 #### Example
 
 <Tabs
-  groupId="validate_email"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_email"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 <TabItem value="request">
 
@@ -193,9 +193,7 @@ Content-Type: application/xml
 
 ##### 3. User solves a task provided by a Bot Defender or Captcha. This feature can be activated as a marketplace configuration.
 
-
 ##### 4. An email is sent to the user for them to activate their email. This feature can be activated as a marketplace configuration.
-
 
 ##### 5. User validates email address through a link received via email.
 
@@ -211,24 +209,23 @@ Content-Type: application/xml
 
 The fields below should be formatted as `json` elements and put in the request body as shown in the example below.
 
-| Field                   | Required  | Description |
-|:------------------------|:----------|:------------|
-| `username`              | Yes       | User's username |
-| `email`                 | Yes       | User's email |
-| `password`              | Yes       |User's password |
-| `captcha`               | Yes       | Validation captcha token |
-| `termsAndConditions`    |           | User's  termsAndConditions boolean |
-
+| Field                | Required | Description                       |
+| :------------------- | :------- | :-------------------------------- |
+| `username`           | Yes      | User's username                   |
+| `email`              | Yes      | User's email                      |
+| `password`           | Yes      | User's password                   |
+| `captcha`            | Yes      | Validation captcha token          |
+| `termsAndConditions` |          | User's termsAndConditions boolean |
 
 #### Example
 
 <Tabs
-  groupId="validate_email"
-  defaultValue="request"
-  values={[
-    { label: 'Request', value: 'request', },
-    { label: 'Response', value: 'response', },
-  ]
+groupId="validate_email"
+defaultValue="request"
+values={[
+{ label: 'Request', value: 'request', },
+{ label: 'Response', value: 'response', },
+]
 }>
 <TabItem value="request">
 

@@ -6,7 +6,7 @@ import Hero from '@site/src/theme/Hero';
 function Home() {
   return (
     <Layout
-      title={`The Palm Network`}
+      title={`The gr0wing Network`}
       description="Assert ultimate dominance on the NFT world.">
       <Hero />
     </Layout >

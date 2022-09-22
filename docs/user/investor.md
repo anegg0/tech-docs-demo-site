@@ -2,12 +2,12 @@
 id: investor
 title: Managing investors
 slug: /user/investor
-description: Overview of Palm Studio's API investors management
+description: Overview of Gr0wing Studio's API investors management
 keywords:
-  - Palm Studio's API
+  - Gr0wing Studio's API
   - API
   - investor management
-image: ../../static/img/palm-logo.png
+image: ../../static/img/gr0wing-logo.png
 ---
 
 This guide is an overview of the investors management
@@ -28,7 +28,7 @@ curl --location --request POST 'https://api.pre.dats.io.builders/pre/api/v1/inve
 --header 'Content-Type: application/json' \
 --data-raw '{
     "isAnonymous": true,
-    "externalId": "palm-test-investor-01"
+    "externalId": "gr0wing-test-investor-01"
 }'
 
 Resp:
@@ -53,13 +53,14 @@ Resp:
     - Create identified investor with credentials
 
 - View investors information
-    - View a list of investors
-    - View investor details
-    - View an investor's investment account information
-    - View an investor's transactions
-    - View an investor asset’s list
-    - View the transaction list of an investor’s asset
-    - View an investor's token list
-    - View the token list of an investor’s asset
+
+  - View a list of investors
+  - View investor details
+  - View an investor's investment account information
+  - View an investor's transactions
+  - View an investor asset’s list
+  - View the transaction list of an investor’s asset
+  - View an investor's token list
+  - View the token list of an investor’s asset
 
 - Update investors information

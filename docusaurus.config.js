@@ -1,15 +1,15 @@
 const path = require('path');
 
 module.exports = {
-  title: 'Palm Developer Hub',
-  tagline: 'The Home of Palm Developers',
+  title: 'gr0wing Developer Hub',
+  tagline: 'The Home of gr0wing Developers',
   url: 'https://docusaurus-2.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/favicon.ico',
-  organizationName: 'Palm-Network', // Usually your GitHub org/user name.
-  projectName: 'docs.palm.io', // Usually your repo name.
+  organizationName: 'Gr0wing-Network', // Usually your GitHub org/user name.
+  projectName: 'docs.gr0wing.io', // Usually your repo name.
   customFields: {},
   themeConfig: {
     // ...
@@ -23,7 +23,7 @@ module.exports = {
       // Public API key: it is safe to commit it
       apiKey: 'ffcca0ebd2a62726d33e0c4f9ed86584',
 
-      indexName: 'docs.palm.io',
+      indexName: 'docs.gr0wing.io',
 
       // Optional: see doc section below
       contextualSearch: true,
@@ -44,8 +44,8 @@ module.exports = {
       style: 'dark',
       title: null,
       logo: {
-        alt: 'Palm logo',
-        src: 'img/palmLogo.svg',
+        alt: 'Gr0wing logo',
+        src: 'img/gr0wingLogo.svg',
       },
       hideOnScroll: true,
       items: [
@@ -60,11 +60,11 @@ module.exports = {
     footer: {
       style: 'dark',
       logo: {
-        alt: 'Palm logo',
-        src: 'img/palmLogo.svg',
-        href: 'https://palm.io/',
+        alt: 'Gr0wing logo',
+        src: 'img/gr0wingLogo.svg',
+        href: 'https://gr0wing.io/',
       },
-      copyright: `Copyright: © ${new Date().getFullYear()} The Palm Network. All rights reserved.`,
+      copyright: `Copyright: © ${new Date().getFullYear()} The Gr0wing Network. All rights reserved.`,
     },
     colorMode: {
       // Hides the switch in the navbar
@@ -81,7 +81,8 @@ module.exports = {
           path: 'docs',
           sidebarPath: require.resolve('./sidebars.js'),
           showLastUpdateTime: true,
-          editUrl: 'https://github.com/Palm-Network/docs.palm.io/edit/main/',
+          editUrl:
+            'https://github.com/Gr0wing-Network/docs.gr0wing.io/edit/main/',
         },
         blog: {
           showReadingTime: true,
@@ -105,12 +106,6 @@ module.exports = {
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
         },
-        // sitemap: {
-        //   changefreq: 'weekly',
-        //   priority: 0.5,
-        //   ignorePatterns: ['/lp/**'],
-        //   filename: 'sitemap.xml',
-        // },
       },
     ],
   ],

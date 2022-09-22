@@ -1,11 +1,11 @@
 ---
 id: glossary
-title: Palm Studio's API Glossary
+title: gr0wing Studio's API Glossary
 slug: /glossary
 sidebar_label: Glossary
-description: A general overview of Palm Studio's API terminology
+description: A general overview of gr0wing Studio's API terminology
 keywords:
-  - Palm
+  - gr0wing
   - user
 ---
 
@@ -27,7 +27,7 @@ A sale of blind assets.
 
 ### Client
 
-A company subscribing to Palm Studio's API services.
+A company subscribing to gr0wing Studio's API services.
 
 ### Collection
 
@@ -92,9 +92,9 @@ Operations performed with a token: distribution, sale, or purchase. Distribution
 
 ### OTC Subscriptions
 
-### Palm Network Account
+### gr0wing Network Account
 
-'Crypto' address on the Palm Network. This is entirely independent of Palm NFT Studio.
+'Crypto' address on the gr0wing Network. This is entirely independent of gr0wing NFT Studio.
 
 ### Purchase
 

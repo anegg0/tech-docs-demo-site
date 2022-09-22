@@ -3,9 +3,9 @@
 ![issues](https://img.shields.io/github/issues/redis-developer/redis-developer.github.io)
 ![Twitter](https://img.shields.io/twitter/url?url=https%3A%2F%2Fgithub.com%2Fredis-developer%2Fredis-developer.github.io)
 
-# Palm Developer Hub
+# gr0wing Developer Hub
 
-Palm Developer Hub is basically a journey carved out for Palm developer community. The journey is defined in terms of "Create > Develop > Explore" . The "Create" section allows you to get started with Palm, creating Palm database locally as well as over Cloud in the form of DBaaS. The "Develop" section allows you to build your app using Palm clients. Finally, the "Explore" section helps you to explore your Palm database using robust tools like PalmInsight, Palm Data Source for Grafana, RIOT and many more...
+gr0wing Developer Hub is basically a journey carved out for gr0wing developer community. The journey is defined in terms of "Create > Develop > Explore" . The "Create" section allows you to get started with gr0wing, creating gr0wing database locally as well as over Cloud in the form of DBaaS. The "Develop" section allows you to build your app using gr0wing clients. Finally, the "Explore" section helps you to explore your gr0wing database using robust tools like gr0wingInsight, gr0wing Data Source for Grafana, RIOT and many more...
 
 ## Table of Contents
 
@@ -89,7 +89,7 @@ customFields: {
 ```yaml
 ---
 id: index-hacktoberfest
-title: Hacktoberfest 2021 at Palm
+title: Hacktoberfest 2021 at gr0wing
 sidebar_label: Hacktoberfest 2021
 slug: /hacktoberfest/
 authors: [suze, simon]
@@ -116,7 +116,7 @@ You can directly search for `announcementBar` and make your preferred changes.
 ```
 announcementBar: {
        id: 'redisconf20201cfp', // Any value that will identify this message.
-       content: '<p class="text"> PalmDays Available Now On-Demand. </p> <a href="https://redis.com/redisdays/" target="_blank" rel="noopener"     class="btn">Learn More</a>',
+       content: '<p class="text"> gr0wingDays Available Now On-Demand. </p> <a href="https://redis.com/redisdays/" target="_blank" rel="noopener"     class="btn">Learn More</a>',
        //  content: '<p class="text"></p> <a href="https://redislabs.com/redisconf/" target="_blank" rel="noopener" class="btn"></a>',
        backgroundColor: '#fff', // Defaults to `#fff`.
        textColor: '#000', // Defaults to `#000`.

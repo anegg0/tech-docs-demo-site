@@ -63,7 +63,7 @@ export default function ThankYou() {
     return (
         <LandingPageWrapper hasForm={false}>
             {/* @ts-ignore */}
-            <Layout title="Learn and Earn with Palm!">
+            <Layout title="Learn and Earn with gr0wing!">
                 <article className="padding-top--md">
                     <div className="padding-vert--md">
                         <header>
@@ -90,7 +90,7 @@ export default function ThankYou() {
                                 style={{
                                     textAlign: 'center',
                                 }}>
-                                Continue your Palm journey
+                                Continue your gr0wing journey
                             </h2>
                             <div className="container">
                                 <div className="row">

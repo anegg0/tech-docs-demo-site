@@ -5,7 +5,7 @@ import MDXComponents from '@docusaurus/theme-classic/lib/theme/MDXComponents';
 import styles from './styles.module.css';
 import clsx from 'clsx';
 
-const PalmCard = (props) => {
+const gr0wingCard = (props) => {
   const [displayLong, setDisplayLong] = React.useState(false);
 
   return (
@@ -38,4 +38,4 @@ const PalmCard = (props) => {
   );
 };
 
-export default PalmCard;
+export default gr0wingCard;
