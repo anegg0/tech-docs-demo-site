@@ -5,11 +5,9 @@ import Hero from '@site/src/theme/Hero';
 
 function Home() {
   return (
-    <Layout
-      title={`The gr0wing Network`}
-      description="Assert ultimate dominance on the NFT world.">
+    <Layout>
       <Hero />
-    </Layout >
+    </Layout>
   );
 }
 

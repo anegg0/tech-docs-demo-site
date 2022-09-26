@@ -26,27 +26,43 @@ function Hero() {
               </div>
             </div>
             <div className="row">
-              <h2 >Quick Links</h2>
+              <h2>Quick Links</h2>
             </div>
             <div className="row">
               <div className="box quicklinks">
                 <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
+                  <a
+                    href={useBaseUrl('/create/redis-stack')}
+                    className="quicklinkstext">
+                    Network details
+                  </a>
                 </div>
               </div>
               <div className="box quicklinks">
                 <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
+                  <a
+                    href={useBaseUrl('/create/redis-stack')}
+                    className="quicklinkstext">
+                    Network details
+                  </a>
                 </div>
               </div>
               <div className="box quicklinks">
                 <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
+                  <a
+                    href={useBaseUrl('/create/redis-stack')}
+                    className="quicklinkstext">
+                    Network details
+                  </a>
                 </div>
               </div>
               <div className="box quicklinks">
                 <div className="quicklinkstext">
-                  <a href={useBaseUrl('/create/redis-stack')} className="quicklinkstext">Network details</a>
+                  <a
+                    href={useBaseUrl('/create/redis-stack')}
+                    className="quicklinkstext">
+                    Network details
+                  </a>
                 </div>
               </div>
             </div>
@@ -66,9 +82,9 @@ function Hero() {
                     Create a database <SvgArrowRight color="#DC382C" />
                   </span>
                 </div>
-                <a href={useBaseUrl('/create/redis-stack')} className="link">
-
-                </a>
+                <a
+                  href={useBaseUrl('/create/redis-stack')}
+                  className="link"></a>
               </div>
 
               <div className="box box-develop">
@@ -85,9 +101,7 @@ function Hero() {
                     Code your application <SvgArrowRight color="#DC382C" />
                   </span>
                 </div>
-                <a href={useBaseUrl('/develop/')} className="link">
-
-                </a>
+                <a href={useBaseUrl('/develop/')} className="link"></a>
               </div>
 
               <div className="box box-explore">
@@ -105,9 +119,7 @@ function Hero() {
                     <SvgArrowRight color="#DC382C" />
                   </span>
                 </div>
-                <a href={useBaseUrl('/explore/')} className="link">
-
-                </a>
+                <a href={useBaseUrl('/explore/')} className="link"></a>
               </div>
 
               <div className="box box-operate">
@@ -125,15 +137,13 @@ function Hero() {
                     <SvgArrowRight color="#DC382C" />
                   </span>
                 </div>
-                <a href={useBaseUrl('/operate/')} className="link">
-
-                </a>
+                <a href={useBaseUrl('/operate/')} className="link"></a>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </header >
+    </header>
   );
 }
 

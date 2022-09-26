@@ -45,7 +45,7 @@ module.exports = {
       title: null,
       logo: {
         alt: 'Gr0wing logo',
-        src: 'img/gr0wingLogo.svg',
+        src: 'img/stone-egg-gr0wing.png',
       },
       hideOnScroll: true,
       items: [
@@ -61,7 +61,7 @@ module.exports = {
       style: 'dark',
       logo: {
         alt: 'Gr0wing logo',
-        src: 'img/gr0wingLogo.svg',
+        src: 'img/stone-egg-gr0wing.png',
         href: 'https://gr0wing.io/',
       },
       copyright: `Copyright: © ${new Date().getFullYear()} The Gr0wing Network. All rights reserved.`,

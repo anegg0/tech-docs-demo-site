@@ -27,26 +27,27 @@
 
 /* You can override the default Infima variables here. */
 :root {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: rgb(33, 175, 144);
-  --ifm-color-primary-darker: rgb(31, 165, 136);
-  --ifm-color-primary-darkest: rgb(26, 136, 112);
-  --ifm-color-primary-light: rgb(70, 203, 174);
-  --ifm-color-primary-lighter: rgb(102, 212, 189);
-  --ifm-color-primary-lightest: rgb(146, 224, 208);
+  --ifm-color-primary: #0c1424;
+  --ifm-color-primary-dark: #404040;
+  --ifm-color-primary-darker: #3c3c3c;
+  --ifm-color-primary-darkest: #323232;
+  --ifm-color-primary-light: #4e4e4e;
+  --ifm-color-primary-lighter: #525252;
+  --ifm-color-primary-lightest: #5c5c5c;
+  --ifm-background-color: #09152e;
   --ifm-code-font-size: 100%;
-  --ifm-font-family-base: 'Lato', sans-serif;
-  --ifm-font-color-base: var(--primary-blue);
+  --ifm-font-family-base: 'Roboto mono', sans-serif;
+  --ifm-font-color-base: var(--primary-grey);
   --ifm-spacing-horizontal: 15px;
   --ifm-line-height-base: 1.85;
 
   --ifm-transition-timing-default: ease-in-out;
 
-  --ifm-global-radius: 10px;
+  --ifm-global-radius: 0px;
 }
 
 html[data-theme='dark'] {
-  --ifm-background-color: var(--primary-black);
+  --ifm-background-color: #5c5c5c;
 }
 
 .container {

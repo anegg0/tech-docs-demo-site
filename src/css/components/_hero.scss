@@ -59,6 +59,22 @@
     }
   }
 
+  .hero-title {
+    margin: 0;
+    line-height: 1.1;
+    font-size: 50px;
+    font-weight: 500;
+
+    @include tablet-mobile {
+      text-align: center;
+    }
+
+    @include mobile {
+      line-height: 1.25;
+      font-size: 32px;
+    }
+  }
+
   .hero-subtitle {
     margin: 17px 0 0 0;
     line-height: 2;

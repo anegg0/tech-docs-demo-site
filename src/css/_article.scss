@@ -29,11 +29,11 @@
   --ifm-code-color: var(--black);
 }
 
-html[data-theme="dark"] {
+html[data-theme='dark'] {
   --ifm-menu-color: var(--white);
-  --ifm-menu-color-active: #829EF0;
-  --ifm-menu-color-background-active: #181D27;
-  --ifm-menu-color-background-hover: #181D27;
+  --ifm-menu-color-active: #829ef0;
+  --ifm-menu-color-background-active: #181d27;
+  --ifm-menu-color-background-hover: #181d27;
   --ifm-toc-border-color: #676768;
   --ifm-toc-link-color: var(--white);
   --ifm-code-color: var(--white);
@@ -99,7 +99,7 @@ hr {
       color: $purple;
 
       @include dark {
-        color: #829EF0;
+        color: #829ef0;
       }
 
       &:before {
@@ -112,14 +112,14 @@ hr {
         content: '';
 
         @include dark {
-          background-color: #829EF0;
+          background-color: #829ef0;
         }
       }
     }
 
     &:hover {
       @include dark {
-        color: #829EF0;
+        color: #829ef0;
       }
     }
 
@@ -132,11 +132,11 @@ hr {
     }
   }
 
-  >li>ul>li>.table-of-contents__link--active:before {
+  > li > ul > li > .table-of-contents__link--active:before {
     left: -33px;
   }
 
-  >li>ul>li>ul>li>.table-of-contents__link--active:before {
+  > li > ul > li > ul > li > .table-of-contents__link--active:before {
     left: -48px;
   }
 }
@@ -153,13 +153,13 @@ blockquote {
 main:not(.home-main) {
   a {
     text-decoration: none;
-    transition: all .2s ease-in-out;
+    transition: all 0.2s ease-in-out;
 
     &:hover {
       color: $purple-hover;
 
       @include dark {
-        color: #829EF0;
+        color: #829ef0;
       }
     }
   }
@@ -254,20 +254,19 @@ main:not(.home-main) {
     }
   }
 
-  >img,
-  >p>img,
-  div[role="tabpanel"]>img,
-  div[role="tabpanel"]>p>img {
+  > img,
+  > p > img,
+  div[role='tabpanel'] > img,
+  div[role='tabpanel'] > p > img {
     display: block;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0 2px 20px rgba($black, .17);
+    box-shadow: 0 2px 20px rgba($black, 0.17);
   }
 
   .has-small-images {
-
-    >img,
-    >p>img {
+    > img,
+    > p > img {
       max-width: 50%;
     }
   }
@@ -288,12 +287,12 @@ main:not(.home-main) {
 .pagination-nav {
   &__link {
     border: none;
-    background-color: $purple;
+    background-color: $grey-dark;
     color: $white;
-    transition: background-color .2s ease-in-out;
+    transition: background-color 0.2s ease-in-out;
 
     &:hover {
-      background-color: $purple-hover;
+      background-color: $grey;
     }
   }
 
@@ -319,7 +318,7 @@ main:not(.home-main) {
     border-radius: 0;
     line-height: 1;
     font-size: 17px;
-    transition: color .2s ease-in-out;
+    transition: color 0.2s ease-in-out;
 
     @include dark {
       color: $white;
@@ -334,7 +333,7 @@ main:not(.home-main) {
       color: $purple-hover !important;
 
       @include dark {
-        color: #829EF0 !important;
+        color: #829ef0 !important;
       }
     }
 
@@ -350,7 +349,7 @@ main:not(.home-main) {
       padding-top: 2.5rem;
       position: relative;
       &:before {
-        background: url("/img/orchestrating-icon-black.svg") no-repeat;
+        background: url('/img/orchestrating-icon-black.svg') no-repeat;
         background-size: contain;
         content: '';
         height: 40px;
@@ -359,8 +358,8 @@ main:not(.home-main) {
         top: 0;
         width: 40px;
 
-        html[data-theme="dark"] & {
-          background: url("/img/orchestrating-icon.svg") no-repeat;
+        html[data-theme='dark'] & {
+          background: url('/img/orchestrating-icon.svg') no-repeat;
           background-size: contain;
         }
       }
@@ -374,11 +373,11 @@ main:not(.home-main) {
   .ri-container {
     .ri-detail {
       &:before {
-        background: url("/img/provisioning-icon-black.svg") no-repeat;
+        background: url('/img/provisioning-icon-black.svg') no-repeat;
         background-size: contain;
 
-        html[data-theme="dark"] & {
-          background: url("/img/provisioning-icon.svg") no-repeat;
+        html[data-theme='dark'] & {
+          background: url('/img/provisioning-icon.svg') no-repeat;
           background-size: contain;
         }
       }
@@ -392,11 +391,11 @@ main:not(.home-main) {
   .ri-container {
     .ri-detail {
       &:before {
-        background: url("/img/observability-icon-black.svg") no-repeat;
+        background: url('/img/observability-icon-black.svg') no-repeat;
         background-size: contain;
 
-        html[data-theme="dark"] & {
-          background: url("/img/observability-icon.svg") no-repeat;
+        html[data-theme='dark'] & {
+          background: url('/img/observability-icon.svg') no-repeat;
           background-size: contain;
         }
       }
@@ -410,11 +409,11 @@ main:not(.home-main) {
   .ri-container {
     .ri-detail {
       &:before {
-        background: url("/img/ci-cd-icon-black.svg") no-repeat;
+        background: url('/img/ci-cd-icon-black.svg') no-repeat;
         background-size: contain;
 
-        html[data-theme="dark"] & {
-          background: url("/img/ci-cd-icon.svg") no-repeat;
+        html[data-theme='dark'] & {
+          background: url('/img/ci-cd-icon.svg') no-repeat;
           background-size: contain;
         }
       }
@@ -427,9 +426,9 @@ main:not(.home-main) {
   margin-bottom: 30px;
   padding: 20px;
   height: calc(100% - 30px);
-  border: 2px solid #E5E5E5;
-  box-shadow: 0px 4px 7px rgba(196, 196, 196, .5);
-  transition: border-color .2s ease-in-out;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0px 4px 7px rgba(196, 196, 196, 0.5);
+  transition: border-color 0.2s ease-in-out;
 
   @include dark {
     background-color: #2a2c2d;
@@ -479,7 +478,7 @@ main:not(.home-main) {
         color: $white;
 
         &:hover {
-          color: #829EF0;
+          color: #829ef0;
         }
       }
     }
@@ -509,13 +508,13 @@ code {
   background-color: $purple-light;
 
   @include dark {
-    background-color: #3E44AC;
+    background-color: #3e44ac;
   }
 }
 
 iframe {
   max-width: 100%;
-  box-shadow: 0 2px 20px rgba($black, .17);
+  box-shadow: 0 2px 20px rgba($black, 0.17);
 }
 
 .sidebar-logo {
