@@ -3,7 +3,7 @@ const path = require('path');
 module.exports = {
   title: 'gr0wing Developer Hub',
   tagline: 'The Home of gr0wing Developers',
-  url: 'https://docusaurus-2.netlify.app',
+  url: 'https://633222b60bbe8e0260e8f140--monumental-pudding-6a2262.netlify.app',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -18,12 +18,12 @@ module.exports = {
     },
     algolia: {
       // The application ID provided by Algolia
-      appId: '2F2YINGKQ2',
+      appId: 'ODORIVVBIV',
 
       // Public API key: it is safe to commit it
-      apiKey: 'ffcca0ebd2a62726d33e0c4f9ed86584',
+      apiKey: '4159edcccacb5986984a1f5600547cf6',
 
-      indexName: 'docs.gr0wing.io',
+      indexName: 'dev_tech_docs_demo_site',
 
       // Optional: see doc section below
       contextualSearch: true,
@@ -62,7 +62,7 @@ module.exports = {
       logo: {
         alt: 'Gr0wing logo',
         src: 'img/stone-egg-gr0wing.png',
-        href: 'https://docusaurus-2.netlify.app',
+        href: 'https://633222b60bbe8e0260e8f140--monumental-pudding-6a2262.netlify.app',
       },
       copyright: `Copyright: © ${new Date().getFullYear()} The Gr0wing Network. All rights reserved.`,
     },
