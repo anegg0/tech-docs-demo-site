@@ -62,7 +62,7 @@ module.exports = {
       logo: {
         alt: 'Gr0wing logo',
         src: 'img/stone-egg-gr0wing.png',
-        href: 'https://gr0wing.io/',
+        href: 'https://docusaurus-2.netlify.app',
       },
       copyright: `Copyright: © ${new Date().getFullYear()} The Gr0wing Network. All rights reserved.`,
     },
