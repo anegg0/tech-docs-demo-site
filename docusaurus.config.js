@@ -7,7 +7,7 @@ module.exports = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/favicon.png',
   organizationName: 'Gr0wing-Network', // Usually your GitHub org/user name.
   projectName: 'docs.gr0wing.io', // Usually your repo name.
   customFields: {},
