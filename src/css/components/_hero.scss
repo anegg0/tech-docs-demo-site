@@ -1,7 +1,7 @@
 .rds-hero {
   margin-top: -63px;
   padding: 100px 0 100px;
-  border-radius: 0 0 10px 10px;
+  border-radius: 0 0 5px 5px;
   background-color: $primary-blue;
   color: $white;
 
@@ -104,7 +104,7 @@
       flex: 1;
       position: relative;
       border: 1px dashed $red;
-      border-radius: 10px;
+      border-radius: 5px;
       transition: background-color 0.2s ease-in-out;
 
       @include mobile {
